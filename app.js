@@ -54,11 +54,33 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
+  var sumOfAB = sum(a,b)[0];
+  console.log('sumAndMultiply', sumOfAB);
+  var sumOfABC = sum(sumOfAB, c)[0];
+  console.log(sumOfABC);
+  var message = a + ' and ' + b + ' and ' + c + ' sum to ' + sumOfABC + '.';
 
+  var productOfAB = multiply(a,b)[0];
+  console.log(productOfAB);
+  var productOfABC = multiply(productOfAB, c)[0];
+  console.log(productOfABC);
+  var message2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productOfABC + '.';
+  var output = [sumOfABC, productOfABC, message, message2];
+  return output;
 }
 
+
+
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
+
+
+
+//var sumOfAB = sum(a,b)[0];
+// console.log('sumAndMultiply mySum: ', sumOfAB);
+// var sumOfABC = sum(mySum, c)[0];
+// console.log('mySecondSum', sumOfABC);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -73,11 +95,18 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-var testArray = [2,3,4]; //eslint-disable-line
 
-function sumArray(testArray){ //eslint-disable-line
+//var testArray = [2,3,4]; //eslint-disable-line
 
-}
+// function sumArray(testArray){ //eslint-disable-line
+//   var firstArraySum = sum(testArray [0], testArray [1])[0];
+//   var secondArraySum = sum(firstArraySum, testArray[2])[0];
+
+  // var message = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and 9 is their sum.';
+  // var output = [secondArraySum, message];
+  // console.log(output);
+  // return output;
+//}
 
 // Here is the test for sumArray(); uncomment it to run it
 
